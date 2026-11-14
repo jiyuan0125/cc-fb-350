@@ -1,0 +1,30 @@
+frame total=576 data_rows=600 summary_rows=1 bad_ts_rows=0 dup_tid_rows=0 cutoff=2026-11-10T18:00:00 cutoff_inclusive=yes
+frame layer=app count=302 usable=298 refunded=4
+frame layer=chat count=196 usable=192 refunded=4
+frame layer=store count=64 usable=62 refunded=2
+frame layer=web count=14 usable=12 refunded=2
+quota layer=app quota=40
+quota layer=chat quota=25
+quota layer=store quota=12
+quota layer=web quota=14
+drawn layer=app drawn=40 borrowed_in=0 borrowed_out=2 gap=0
+drawn layer=chat drawn=25 borrowed_in=0 borrowed_out=0 gap=0
+drawn layer=store drawn=12 borrowed_in=0 borrowed_out=0 gap=0
+drawn layer=web drawn=14 borrowed_in=2 borrowed_out=0 gap=0
+pairs total=10 same=8 cross=2
+pair replaced=W000012 replacement=W000076 depth=1 kind=同层 target_layer=app source_channel=app
+pair replaced=W000034 replacement=W000078 depth=1 kind=同层 target_layer=app source_channel=app
+pair replaced=W000052 replacement=W000081 depth=1 kind=同层 target_layer=app source_channel=app
+pair replaced=W000061 replacement=W000083 depth=1 kind=同层 target_layer=app source_channel=app
+pair replaced=W000016 replacement=W000082 depth=3 kind=同层 target_layer=chat source_channel=chat
+pair replaced=W000063 replacement=W000084 depth=1 kind=同层 target_layer=chat source_channel=chat
+pair replaced=W000035 replacement=W000116 depth=1 kind=同层 target_layer=store source_channel=store
+pair replaced=W000080 replacement=W000126 depth=1 kind=同层 target_layer=store source_channel=store
+pair replaced=W000203 replacement=W000085 depth=1 kind=借层 target_layer=web source_channel=app
+pair replaced=W000366 replacement=W000086 depth=1 kind=借层 target_layer=web source_channel=app
+depth value=1 count=9
+depth value=3 count=1
+borrow target_layer=web source_layer=app replaced=W000203 replacement=W000085 depth=1 source_pos_before=44 source_pos_after=45
+borrow target_layer=web source_layer=app replaced=W000366 replacement=W000086 depth=1 source_pos_before=45 source_pos_after=46
+weighted rate=82.7% numerator=205 denominator=248 weights=app:3,chat:2,store:1,web:5
+summary frame=576 sample=91 report=91 frame_layers_sum=576 drawn_layers_sum=91 unique_tids=91 quota_sum=91 pairs=10 unresolved=0 channel_order=app,chat,store,web
